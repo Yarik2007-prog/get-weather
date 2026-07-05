@@ -18,23 +18,23 @@
 
             <div class="form-elem">
                 <label for="city-id">City ID</label>
-                <input type="text" name="city-id" id="city-id" />
+                <input disabled type="text" name="city-id" id="city-id" />
             </div>
 
             <div class="form-elem-radio">
                 <div class="radio-item">
-                    <label for="city-name-radio">City name</label>
+                    <label for="city-radio">City name</label>
                     <input
                         type="radio"
-                        name="search-type"
+                        name="city-radio"
                         id="city-name-radio"
                         checked
                     />
                 </div>
 
                 <div class="radio-item">
-                    <label for="city-name-id">City ID</label>
-                    <input type="radio" name="search-type" id="city-name-id" />
+                    <label for="city-radio">City ID</label>
+                    <input type="radio" name="city-radio" id="city-id-radio" />
                 </div>
             </div>
 
@@ -56,8 +56,8 @@
             </div>
 
             <div class="form-button">
-                <button type="submit">Weather</button>
-                <button type="reset">Cancel</button>
+                <button class="weather" type="submit">Weather</button>
+                <button class="cancel" type="reset">Cancel</button>
             </div>
         </form>
     </body>
