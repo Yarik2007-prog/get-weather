@@ -1,13 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script defer src="./src/index.js"></script>
-    <title>Get Weather</title>
-</head>
-<body>
-    <h1></h1>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <script defer src="./src/index.js"></script>
+        <title>Get Weather</title>
+    </head>
+    <body>
+        <form>
+            <h1>Weather map</h1>
+
+            <div class="form-elem">
+                <label for="city-name">City name</label>
+                <input type="text" name="city-name" id="city-name" />
+            </div>
+
+            <div class="form-elem">
+                <label for="city-id">City ID</label>
+                <input type="text" name="city-id" id="city-id" />
+            </div>
+
+            <div class="form-elem-radio">
+                <div class="radio-item">
+                    <label for="city-name-radio">City name</label>
+                    <input
+                        type="radio"
+                        name="search-type"
+                        id="city-name-radio"
+                        checked
+                    />
+                </div>
+
+                <div class="radio-item">
+                    <label for="city-name-id">City ID</label>
+                    <input type="radio" name="search-type" id="city-name-id" />
+                </div>
+            </div>
+
+            <div class="form-elem-data">
+                <div class="data-item">
+                    <h2>Temprature</h2>
+                    <span class="temp"></span>
+                </div>
+
+                <div class="data-item">
+                    <h2>Wind speed</h2>
+                    <span class="wind"></span>
+                </div>
+
+                <div class="data-item">
+                    <h2>Humidity</h2>
+                    <span class="hum"></span>
+                </div>
+            </div>
+
+            <div class="form-button">
+                <button type="submit">Weather</button>
+                <button type="reset">Cancel</button>
+            </div>
+        </form>
+    </body>
 </html>
