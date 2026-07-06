@@ -37,7 +37,6 @@ weatherButton.addEventListener("click", (event) => {
 
     fetch(url)
         .then((weather) => {
-            console.log(weather);
             if (!weather.ok) throw new Error("Error");
             return weather.json();
         })
@@ -45,7 +44,6 @@ weatherButton.addEventListener("click", (event) => {
             spanTemp.textContent = `${data.main.temp} °C`;
             spanWind.textContent = `${data.wind.speed} m/s`;
             spanHum.textContent = `${data.main.humidity} %`;
-            console.log(data);
         })
         .catch((error) => {
             console.log(error);
@@ -56,4 +54,11 @@ cancelButton.addEventListener("click", () => {
     spanTemp.textContent = "";
     spanWind.textContent = "";
     spanHum.textContent = "";
+
+    cityNameText.value = "";
+    cityIDText.value = "";
+
+    radioCityName.checked = true;
+
+    updateInputs();
 });
