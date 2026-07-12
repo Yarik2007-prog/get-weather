@@ -23,8 +23,8 @@ weatherButton.addEventListener("click", (event) => {
     const param = {
         url: "https://api.openweathermap.org/data/2.5",
         appid: "0e6d1d3bff8e0a32e113767624f5060e",
-        cityName: cityNameText.value,
-        cityID: cityIDText.value,
+        cityName: cityNameText.value.trim(),
+        cityID: cityIDText.value.trim(),
     };
 
     let url;
@@ -47,6 +47,9 @@ weatherButton.addEventListener("click", (event) => {
         })
         .catch((error) => {
             console.log(error);
+            spanTemp.textContent = "";
+            spanWind.textContent = "";
+            spanHum.textContent = "";
         });
 });
 
